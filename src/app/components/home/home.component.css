@@ -1,0 +1,64 @@
+/* CONTENEDOR PRINCIPAL */
+#home-container {
+    text-align: center;
+    /* CENTRA TODO EL CONTENIDO */
+    padding: 20px;
+    margin: 50px auto;
+    max-width: 600px;
+    border: 2px solid #f4f4f4;
+    /* BORDE GRIS SUAVE */
+    border-radius: 10px;
+    /* ESQUINAS REDONDEADAS */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* SOMBRA ELEVADA */
+    background-color: #ffffff;
+    /* FONDO BLANCO */
+}
+
+/* TÍTULO PRINCIPAL */
+#home-container h1 {
+    color: #007bff;
+    /* AZUL PARA RESALTAR */
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* PÁRRAFO */
+#home-container p {
+    color: #555;
+    /* GRIS OSCURO */
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* IMAGEN */
+#home-container img {
+    width: 150px;
+    /* TAMAÑO AJUSTADO */
+    margin: 20px auto;
+    display: block;
+    /* CENTRAR LA IMAGEN */
+}
+
+/* BOTÓN */
+#home-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #007bff;
+    /* AZUL ANGULAR */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#home-container button:hover {
+    background-color: #0056b3;
+    /* AZUL MÁS OSCURO */
+    transform: scale(1.05);
+    /* EFECTO DE ZOOM */
+}

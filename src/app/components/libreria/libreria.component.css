@@ -1,0 +1,76 @@
+/* CONTENEDOR GENERAL DE LA LIBRERÍA */
+div {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 900px;
+    border: 2px solid #e0e0e0;
+    border-radius: 15px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
+    font-family: 'Arial', sans-serif;
+}
+
+/* TÍTULO PRINCIPAL */
+h1 {
+    text-align: center;
+    color: #212529;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+/* FORMULARIO */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+form label {
+    font-weight: bold;
+    color: #495057;
+    flex-basis: 100%;
+}
+
+form input {
+    flex-basis: 48%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+form button {
+    flex-basis: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* COMIC FAVORITO */
+div[style*="background-color: yellow;"] {
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #fff8b5;
+    border: 1px solid #ffeb3b;
+}
+
+/* CONTENEDOR DE CÓMICS */
+div app-comic {
+    display: inline-block;
+    width: 100%;
+    margin-top: 20px;
+}
