@@ -1,25 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { ServicePersonas } from '../../services/service.personas';
-import { Persona } from '../../models/persona';
 
 @Component({
+  standalone: true,
   selector: 'app-personasstandalone',
   templateUrl: './personasstandalone.component.html',
-  styleUrl: './personasstandalone.component.css',
-  standalone: true,
-  // imports: [NgFor, NgIf],
-  providers: [ServicePersonas]
+  styleUrls: ['./personasstandalone.component.css'],
+  imports: [CommonModule]
 })
-export class PersonasstandaloneComponent {
-  public personas!: Array<Persona>;
-  constructor(private _service: ServicePersonas) { }
+export class PersonasstandaloneComponent implements OnInit {
+  public personas: Array<any> = [];
+  public errorMessage: string = '';
+
+  constructor(private _servicePersonas: ServicePersonas) { }
+
   ngOnInit(): void {
-    // this._service.getPersonas().subscribe(response => {
-    //   console.log("leyendo");
-    //   this.personas = response;
-    // })
-    this._service.getPersonasPromesa().then(response => {
-      this.personas = response;
-    })
+    this._servicePersonas.getPersonasPromesa()
+      .then((data) => {
+        this.personas = data;
+      })
+      .catch((error) => {
+        this.errorMessage = 'Hubo un error al cargar las personas.';
+        console.error(error);
+      });
   }
 }

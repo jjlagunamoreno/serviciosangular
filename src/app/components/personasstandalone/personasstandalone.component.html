@@ -1,8 +1,14 @@
-<div>
-    <h1>Personas Standalone</h1>
-    <ul class="list-group">
-        @for(persona of personas; track persona){
-        <li class="list-group-item">{{persona.Nombre}}</li>
-        }
+<div class="container mt-4">
+    <h1>Personas</h1>
+    <div *ngIf="errorMessage" class="alert alert-danger">
+        {{ errorMessage }}
+    </div>
+    <ul *ngIf="personas.length > 0" class="list-group">
+        <li *ngFor="let persona of personas" class="list-group-item">
+            {{ persona.Nombre }}
+        </li>
     </ul>
+    <div *ngIf="personas.length === 0 && !errorMessage" class="text-muted">
+        <p>Cargando personas...</p>
+    </div>
 </div>

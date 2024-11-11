@@ -1,0 +1,32 @@
+<div>
+    <h1 style="color: blue">
+        Plantilla funciones múltiple
+    </h1>
+    <form #funcionesForm="ngForm">
+        <select name="selectfunciones" #selectfunciones class="form-control" multiple>
+            <option *ngFor="let function of funciones" [value]="function">{{ function }}</option>
+        </select>
+    </form>
+    <button class="btn btn-primary" (click)="mostrarPlantilla()">
+        Mostrar plantilla
+    </button>
+    <table class="table table-bordered table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>APELLIDO</th>
+                <th>FUNCION</th>
+                <th>HOSPITAL</th>
+                <th>SALARIO</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let empleado of empleados">
+                <td>{{ empleado.apellido }}</td>
+                <td>{{ empleado.funcion }}</td>
+                <td>{{ empleado.idHospital }}</td>
+                <td>{{ empleado.salario }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

@@ -1,0 +1,38 @@
+<div>
+    <form #selectForm="ngForm">
+        <select class="form-control" name="select" #select id="" (change)="verFuncionPlantilla()">
+            @for(plantilla of plantillas; track plantilla){
+            <option value={{plantilla}}> {{plantilla}} </option>
+            }
+        </select>
+    </form>
+
+    @if(funciones){
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>idEmpleado</th>
+                <th>idHospital</th>
+                <th>idSala</th>
+                <th>apellido</th>
+                <th>funcion</th>
+                <th>turno</th>
+                <th>salario</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for(funcion of funciones; track funcion){
+            <tr>
+                <td> {{funcion.idEmpleado}} </td>
+                <td> {{funcion.idHospital}} </td>
+                <td> {{funcion.idSala}} </td>
+                <td> {{funcion.apellido}} </td>
+                <td> {{funcion.funcion}} </td>
+                <td> {{funcion.turno}} </td>
+                <td> {{funcion.salario}} </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+    }
+</div>

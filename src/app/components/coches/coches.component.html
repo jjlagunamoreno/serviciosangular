@@ -1,0 +1,22 @@
+<div>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>IdCoche</th>
+                <th>Modelo</th>
+                <th>Conductor</th>
+                <th>Imagen</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (coche of coches; track coche){
+            <tr>
+                <td>{{coche.idcoche}}</td>
+                <td>{{coche.marca}} {{coche.modelo}} </td>
+                <td>{{coche.conductor}}</td>
+                <td><img src={{coche.imagen}} alt="" style="height: 150px;width:'200px'"></td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
