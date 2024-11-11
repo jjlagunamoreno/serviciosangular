@@ -14,6 +14,7 @@ import { provideHttpClient } from '@angular/common/http';
 import { ServiceComics } from './services/service.comics';
 import { ServicePersonas } from './services/service.personas';
 import { PersonasapiComponent } from './components/personasapi/personasapi.component';
+import { PersonasstandaloneComponent } from './components/personasstandalone/personasstandalone.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +22,14 @@ import { PersonasapiComponent } from './components/personasapi/personasapi.compo
     HomeComponent,
     LibreriaComponent,
     ComicComponent,
-    PersonasapiComponent
+    PersonasapiComponent,
+    //PersonasstandaloneComponent lo quitamos para que no de conflicto y lo importamos por el standalone
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    PersonasstandaloneComponent
   ],
   providers: [ServiceComics, ServicePersonas, provideHttpClient()],//Y LO IMPLEMENTAMOS EN PROVIDERS
   bootstrap: [AppComponent]
